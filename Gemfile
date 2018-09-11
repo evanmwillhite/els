@@ -1,6 +1,7 @@
 source "http://rubygems.org"
 
-gem 'jekyll', '~> 2.5'
+gem 'jekyll', '~> 3.8.3'
+gem 'pygments.rb'
 gem 'redcarpet'
-gem 'sass', '~> 3.4.13'
-gem 'bitters', '1.0.0'
+gem 'sass', '~> 3.5.7'
+gem 'bitters', '1.8.0'
