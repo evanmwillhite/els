@@ -7,6 +7,7 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
     del = require('del'),
+    ghpages = require('gh-pages'),
     neat = require('node-neat').includePaths;
 
 var production = false,
@@ -50,8 +51,6 @@ gulp.task('styles', function () {
 
 gulp.task('scripts', function () {
   return gulp.src(paths.scripts)
-    .pipe($.jshint('.jshintrc'))
-    .pipe($.jshint.reporter('default'))
     .pipe(gulp.dest('.tmp/scripts'))
     .pipe(browserSync.reload({ stream: true }));
 });
@@ -79,7 +78,7 @@ gulp.task('optimize', ['html', 'styles', 'scripts', 'images', 'fonts'], function
 
   return gulp.src('dist/**/*.html')
     .pipe($.if('*.css', $.minifyCss({processImport: false})))
-    .pipe($.if('*.js', $.uglify()))
+    // .pipe($.if('*.js', $.uglify()))
     .pipe($.rev())
     .pipe(useref({ searchPath: ['.tmp', 'dist', '.'] }))
     .pipe($.revReplace())
@@ -106,8 +105,7 @@ gulp.task('build', ['replace'], function () {
 });
 
 gulp.task('gh-pages', function () {
-  return gulp.src('dist/**/*')
-    .pipe($.ghPages())
+  ghpages.publish('dist');
 });
 
 gulp.task('watch', function () {

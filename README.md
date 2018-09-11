@@ -26,5 +26,7 @@ Serve your source locally into your browser. BrowserSync automatically loads any
 ##### gulp build
 Build the concatenated, minified production version of your source into the `dist` directory.
 
-##### gulp deploy
+##### gulp deploy (runs clean, build and gh-pages)
 Deploy the production version of your source to [GitHub Pages](http://pages.github.com/).
+
+**There is an issue here currently where it doesn't copy over the styles and scripts directory. Just make sure those exist in /dist and then run `gulp gh-pages`**
