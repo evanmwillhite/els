@@ -2,6 +2,7 @@
 // Generated on 2016-01-15 using generator-playbook 2.0.1
 
 var gulp = require('gulp'),
+    useref = require('gulp-useref'),
     $ = require('gulp-load-plugins')(),
     browserSync = require('browser-sync'),
     runSequence = require('run-sequence'),
@@ -75,15 +76,12 @@ gulp.task('clean', function (cb) {
 });
 
 gulp.task('optimize', ['html', 'styles', 'scripts', 'images', 'fonts'], function () {
-  var assets = $.useref.assets({ searchPath: ['.tmp', 'dist', '.'] });
 
   return gulp.src('dist/**/*.html')
-    .pipe(assets)
     .pipe($.if('*.css', $.minifyCss({processImport: false})))
     .pipe($.if('*.js', $.uglify()))
     .pipe($.rev())
-    .pipe(assets.restore())
-    .pipe($.useref())
+    .pipe(useref({ searchPath: ['.tmp', 'dist', '.'] }))
     .pipe($.revReplace())
     .pipe($.if('*.html', $.htmlmin({collapseWhitespace: true})))
     .pipe(gulp.dest('dist'));
