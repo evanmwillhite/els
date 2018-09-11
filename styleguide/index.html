@@ -1,0 +1,580 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Style Guide</title>
+    <meta name="description" content="static.">
+    <meta name="viewport" content="width=device-width, initial-scale=0.9">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <!-- build:css /styles/application.css -->
+<link href="/vendor/css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/vendor/css/themify-icons.css" rel="stylesheet" type="text/css" media="all" />
+<link href="/vendor/css/flexslider.css" rel="stylesheet" type="text/css" media="all" />
+<link href='/vendor/css/google-fonts.css' rel='stylesheet' type='text/css'>
+<link href='/vendor/css/google-fonts2.css' rel='stylesheet' type='text/css'>
+<link href='/vendor/css/google-fonts3.css' rel='stylesheet' type='text/css'>
+<link href="/styles/application.css" rel="stylesheet" type="text/css" media="all" />
+<!-- endbuild -->
+
+    
+  </head>
+
+  <body class="styleguide">
+    <div id="main" class="wrap" role="main">
+  <h1>Style Guide</h1>
+  
+
+
+<nav id="component-selector" class="wrap">
+  <form>
+    <select name="newurl" id="component-select" onChange="window.location.replace(this.options[this.selectedIndex].value)">
+      <option value="">Select a Component</option>
+      <option value="#guide-color-palettes">Colors</option>
+      
+      <option value="#guide-hero">Hero</option>
+      
+      <option value="#guide-hero-image-parallax-with-content">&nbsp;&nbsp;&nbsp;Hero Image Parallax with content</option>
+      
+      <option value="#guide-interior-hero-section">&nbsp;&nbsp;&nbsp;Interior Hero Section</option>
+      
+      <option value="#guide-social-footer">&nbsp;&nbsp;&nbsp;Social Footer</option>
+      
+      <option value="#guide-testimonials-image-parallax-background">&nbsp;&nbsp;&nbsp;Testimonials Image Parallax Background</option>
+      
+      
+      <option value="#guide-navigation">Navigation</option>
+      
+      <option value="#guide-site-wide-navigation">&nbsp;&nbsp;&nbsp;Site-wide Navigation</option>
+      
+      
+      <option value="#guide-typography">Typography</option>
+      
+      <option value="#guide-base-typography">&nbsp;&nbsp;&nbsp;Base Typography</option>
+      
+      
+    </select>
+  </form>
+</nav>
+
+<h2 id="guide-color-palettes" class="cf">Colors</h2>
+
+  <article class="component">
+  <header class="component__header">
+    <h3 id="guide-brand-colors">Brand Colors</h3>
+    <p><strong>Usage:</strong> Unique to brand</p>
+    <p class="entry--last"><strong>SCSS partial:</strong> <a href="/styles/base/_variables.scss">/styles/base/_variables.scss</a></p>
+  </header>
+
+  <div class="component__content--color">
+    <div class="component__rendered--color">
+      <div class="color__tile color__tile--green">
+  <code class="color__name">$green</code>
+</div>
+    </div>
+  </div>
+
+</article>
+
+  <article class="component">
+  <header class="component__header">
+    <h3 id="guide-neutral-colors">Neutral Colors</h3>
+    <p><strong>Usage:</strong> Base set used to mix tints and tones.</p>
+    <p class="entry--last"><strong>SCSS partial:</strong> <a href="/styles/base/_variables.scss">/styles/base/_variables.scss</a></p>
+  </header>
+
+  <div class="component__content--color">
+    <div class="component__rendered--color">
+      <div class="color__tile color__tile--base-background-color">
+  <code class="color__name">$base-background-color</code>
+</div>
+
+<div class="color__tile color__tile--light-gray">
+  <code class="color__name">$light-gray</code>
+</div>
+
+<div class="color__tile color__tile--medium-gray">
+  <code class="color__name">$medium-gray</code>
+</div>
+
+<div class="color__tile color__tile--dark-gray">
+  <code class="color__name">$dark-gray</code>
+</div>
+    </div>
+  </div>
+
+</article>
+
+
+<h2 id="guide-hero" class="cf">Hero</h2>
+
+<article class="component">
+  <header class="component__header">
+    <h3 id="guide-hero-image-parallax-with-content">Hero Image Parallax with content</h3>
+      <p><strong>Usage:</strong> Fullscreen image background with image overlay content (on homepage)</p>
+      
+      
+  </header>
+
+  <div class="component__content">
+    <div class="component__rendered">
+      <section class="image-bg overlay fullscreen cover parallax">
+  <div class="background-image-holder">
+    <img alt="image" class="background-image" src="/images/pro/10.jpg" />
+  </div>
+  <div class="container v-align-transform">
+ 	  <div class="row">
+  		<div class="col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3">
+  			<img alt="logo" class="mb48 mb-xs-16 fade-1-4" src="/images/logo-white.png">
+  		</div>
+  	</div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+    </div>
+    <div class="component__code">
+
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span>        <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;image-bg overlay fullscreen cover parallax&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;background-image-holder&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;image&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;background-image&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/images/pro/10.jpg&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container v-align-transform&quot;</span><span class="p">&gt;</span>
+ 	  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+  		<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-sm-4 col-sm-offset-4 col-xs-6 col-xs-offset-3&quot;</span><span class="p">&gt;</span>
+  			<span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;logo&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mb48 mb-xs-16 fade-1-4&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/images/logo-white.png&quot;</span><span class="p">&gt;</span>
+  		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  	<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="c">&lt;!--end of row--&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="c">&lt;!--end of container--&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+      </code></pre></figure>
+
+    </div>
+  </div>
+</article>
+
+<article class="component">
+  <header class="component__header">
+    <h3 id="guide-interior-hero-section">Interior Hero Section</h3>
+      <p><strong>Usage:</strong> hero area on interior pages</p>
+      
+      
+  </header>
+
+  <div class="component__content">
+    <div class="component__rendered">
+      <section class="page-title page-title-4 bg-secondary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h3 class="uppercase mb0"></h3>
+      </div>
+      <div class="col-md-6 text-right">
+        <ol class="breadcrumb breadcrumb-2">
+          <li>
+              <a href="/">Home</a>
+          </li>
+          
+	          <li class="active">
+	          	
+	          </li>
+          
+      	</ol>
+      </div>
+    </div>
+      <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+    </div>
+    <div class="component__code">
+
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span>        <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;page-title page-title-4 bg-secondary&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">h3</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;uppercase mb0&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-md-6 text-right&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">ol</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;breadcrumb breadcrumb-2&quot;</span><span class="p">&gt;</span>
+          <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+              <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+          <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          
+	          <span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;active&quot;</span><span class="p">&gt;</span>
+	          	
+	          <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+          
+      	<span class="p">&lt;/</span><span class="nt">ol</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="c">&lt;!--end of row--&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="c">&lt;!--end of container--&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+      </code></pre></figure>
+
+    </div>
+  </div>
+</article>
+
+<article class="component">
+  <header class="component__header">
+    <h3 id="guide-social-footer">Social Footer</h3>
+      <p><strong>Usage:</strong> Full width section with social icon links</p>
+      
+      
+  </header>
+
+  <div class="component__content">
+    <div class="component__rendered">
+      <section class="bg-dark">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+				<ul class="list-inline social-list mb24">
+					<li>
+						<a href="tel:+6158283801">615.828.3801</a>
+					</li>
+					<li>
+						<a href="tel:+6155060689">615.506.0689</a>
+					</li>
+				</ul>
+      </div>
+      <div class="col-sm-12 text-center footer-address">
+        <p>PO Box 8803</p>
+        <p>Gallatin, TN 37066</p>
+      </div>
+    </div>
+    <!--end of row-->
+  </div>
+  <!--end of container-->
+</section>
+
+    </div>
+    <div class="component__code">
+
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span>        <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;bg-dark&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-sm-12 text-center&quot;</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;list-inline social-list mb24&quot;</span><span class="p">&gt;</span>
+					<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;tel:+6158283801&quot;</span><span class="p">&gt;</span>615.828.3801<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+					<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+					<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;tel:+6155060689&quot;</span><span class="p">&gt;</span>615.506.0689<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+					<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+				<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;col-sm-12 text-center footer-address&quot;</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>PO Box 8803<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Gallatin, TN 37066<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+      <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+    <span class="c">&lt;!--end of row--&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="c">&lt;!--end of container--&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+
+      </code></pre></figure>
+
+    </div>
+  </div>
+</article>
+
+<article class="component">
+  <header class="component__header">
+    <h3 id="guide-testimonials-image-parallax-background">Testimonials Image Parallax Background</h3>
+      <p><strong>Usage:</strong> Testimonial slideshow over fullscreen image background with parallax effect</p>
+      
+      
+  </header>
+
+  <div class="component__content">
+    <div class="component__rendered">
+      <section class="testimonials-image-bg cover fullscreen image-bg parallax overlay">
+  <div class="background-image-holder">
+    <img alt="image" class="background-image" src="/images/pro/4.jpg" />
+  </div>
+  <div class="container v-align-transform">
+		<div class="row">
+			<div class="testimonial-slides col-sm-8 col-sm-offset-2 text-center image-slider slider-all-controls">
+				<ul class="slides">
+					<li>
+						<h3>&ldquo;Our school has been a very satisfied customer of Extreme Lawn Service and Landscaping for many years...&rdquo;</h3>
+						<p class="lead">Bill Hovenden, Ph.D.<em> -- Sumner Academy</em></p>
+					</li>
+					<li>
+						<h3>&ldquo;... I enjoy the attention and care given to me with the maintenance of my yard; they spoil me. Very professional and at an affordable cost.&rdquo;</h3>
+						<p class="lead">Kelly L. Coley<em> --Coley & Lyles Insurance Agency</em></p>
+					</li>
+					<li>
+						<h3>&ldquo;All of our experiences we have had with Extreme Lawn Service & Landscaping have been positive & do not hesitate at all in giving them a good recommendation.&rdquo;</h3>
+						<p class="lead">Charles Curtis <em>--Charles R. Curtis Construction Inc.</em></p>
+					</li>
+				</ul>
+			</div>
+		</div><!--end of row-->
+	</div><!--end of container-->
+</section>
+    </div>
+    <div class="component__code">
+
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span>        <span class="p">&lt;</span><span class="nt">section</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;testimonials-image-bg cover fullscreen image-bg parallax overlay&quot;</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;background-image-holder&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">img</span> <span class="na">alt</span><span class="o">=</span><span class="s">&quot;image&quot;</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;background-image&quot;</span> <span class="na">src</span><span class="o">=</span><span class="s">&quot;/images/pro/4.jpg&quot;</span> <span class="p">/&gt;</span>
+  <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+  <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;container v-align-transform&quot;</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;row&quot;</span><span class="p">&gt;</span>
+			<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;testimonial-slides col-sm-8 col-sm-offset-2 text-center image-slider slider-all-controls&quot;</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;slides&quot;</span><span class="p">&gt;</span>
+					<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="ni">&amp;ldquo;</span>Our school has been a very satisfied customer of Extreme Lawn Service and Landscaping for many years...<span class="ni">&amp;rdquo;</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;lead&quot;</span><span class="p">&gt;</span>Bill Hovenden, Ph.D.<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> -- Sumner Academy<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+					<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+					<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="ni">&amp;ldquo;</span>... I enjoy the attention and care given to me with the maintenance of my yard; they spoil me. Very professional and at an affordable cost.<span class="ni">&amp;rdquo;</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;lead&quot;</span><span class="p">&gt;</span>Kelly L. Coley<span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span> --Coley <span class="err">&amp;</span> Lyles Insurance Agency<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+					<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+					<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="ni">&amp;ldquo;</span>All of our experiences we have had with Extreme Lawn Service <span class="err">&amp;</span> Landscaping have been positive <span class="err">&amp;</span> do not hesitate at all in giving them a good recommendation.<span class="ni">&amp;rdquo;</span><span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">p</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;lead&quot;</span><span class="p">&gt;</span>Charles Curtis <span class="p">&lt;</span><span class="nt">em</span><span class="p">&gt;</span>--Charles R. Curtis Construction Inc.<span class="p">&lt;/</span><span class="nt">em</span><span class="p">&gt;&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+					<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+				<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+			<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span><span class="c">&lt;!--end of row--&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span><span class="c">&lt;!--end of container--&gt;</span>
+<span class="p">&lt;/</span><span class="nt">section</span><span class="p">&gt;</span>
+      </code></pre></figure>
+
+    </div>
+  </div>
+</article>
+
+
+<h2 id="guide-navigation" class="cf">Navigation</h2>
+
+<article class="component">
+  <header class="component__header">
+    <h3 id="guide-site-wide-navigation">Site-wide Navigation</h3>
+      <p><strong>Usage:</strong> Header Nav at top of page</p>
+      
+      
+  </header>
+
+  <div class="component__content">
+    <div class="component__rendered">
+      <div class="nav-container">
+	<a id="top"></a>
+	<nav class="absolute ">
+		<div class="nav-bar">
+				<div class="module left">
+						<a href="/">Extreme Lawn Service <span>& Landscaping</span></a>
+				</div>
+				<div class="module widget-handle mobile-toggle right visible-sm visible-xs">
+						<i class="ti-menu"></i>
+				</div>
+				<div class="module-group right">
+					<div class="module left">
+						<ul class="menu">
+							<li><a href="/">Home</a></li>
+							<li class="has-dropdown">
+								<a href="/services">Services</a>
+								<ul class="mega-menu">
+									<li>
+										<ul>
+											<li>
+												<a href="/services#lawn">Lawn &amp; Landscape Maintenance</a>
+											</li>
+                      <li>
+                        <a href="/services#weed-control">Weed/Pest Control &amp; Fertilization</a>
+                      </li>
+											<li>
+												<a href="/services#sodding">Sodding &amp; Overseeding</a>
+											</li>
+                      <li>
+                        <a href="/services#hardscape">Hardscape Installation</a>
+                      </li>
+											<li>
+												<a href="/services#installation">Landscape Installation</a>
+											</li>
+											<li>
+												<a href="/services#lighting">Low Voltage Lighting</a>
+											</li>
+											<li>
+												<a href="/services#walls">Retaining Walls</a>
+											</li>
+											<li>
+												<a href="/services#erosion">Erosion Control</a>
+											</li>
+											<li>
+												<a href="/services#snow-ice">Snow/Ice Removal</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</li>
+							<li>
+								<a href="/testimonials">Testimonials</a>
+							</li>
+							<li>
+								<a href="/our-story">
+										Our Story
+								</a>
+							</li>
+						</ul>
+					</div>
+					<!--end of menu module-->
+					<div class="module left">
+						<a class="btn btn-sm btn-filled" href="/contact">Contact</a>
+					</div>
+			</div>
+			<!--end of module group-->
+		</div>
+	</nav>
+</div>
+    </div>
+    <div class="component__code">
+
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span>        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-container&quot;</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">a</span> <span class="na">id</span><span class="o">=</span><span class="s">&quot;top&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+	<span class="p">&lt;</span><span class="nt">nav</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;absolute &quot;</span><span class="p">&gt;</span>
+		<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;nav-bar&quot;</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;module left&quot;</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Extreme Lawn Service <span class="p">&lt;</span><span class="nt">span</span><span class="p">&gt;</span><span class="err">&amp;</span> Landscaping<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+				<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;module widget-handle mobile-toggle right visible-sm visible-xs&quot;</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">i</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;ti-menu&quot;</span><span class="p">&gt;&lt;/</span><span class="nt">i</span><span class="p">&gt;</span>
+				<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+				<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;module-group right&quot;</span><span class="p">&gt;</span>
+					<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;module left&quot;</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;menu&quot;</span><span class="p">&gt;</span>
+							<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/&quot;</span><span class="p">&gt;</span>Home<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+							<span class="p">&lt;</span><span class="nt">li</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;has-dropdown&quot;</span><span class="p">&gt;</span>
+								<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services&quot;</span><span class="p">&gt;</span>Services<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+								<span class="p">&lt;</span><span class="nt">ul</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;mega-menu&quot;</span><span class="p">&gt;</span>
+									<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+										<span class="p">&lt;</span><span class="nt">ul</span><span class="p">&gt;</span>
+											<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+												<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#lawn&quot;</span><span class="p">&gt;</span>Lawn <span class="ni">&amp;amp;</span> Landscape Maintenance<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+											<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#weed-control&quot;</span><span class="p">&gt;</span>Weed/Pest Control <span class="ni">&amp;amp;</span> Fertilization<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+											<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+												<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#sodding&quot;</span><span class="p">&gt;</span>Sodding <span class="ni">&amp;amp;</span> Overseeding<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+											<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+                      <span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+                        <span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#hardscape&quot;</span><span class="p">&gt;</span>Hardscape Installation<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+                      <span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+											<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+												<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#installation&quot;</span><span class="p">&gt;</span>Landscape Installation<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+											<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+											<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+												<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#lighting&quot;</span><span class="p">&gt;</span>Low Voltage Lighting<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+											<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+											<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+												<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#walls&quot;</span><span class="p">&gt;</span>Retaining Walls<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+											<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+											<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+												<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#erosion&quot;</span><span class="p">&gt;</span>Erosion Control<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+											<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+											<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+												<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/services#snow-ice&quot;</span><span class="p">&gt;</span>Snow/Ice Removal<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+											<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+										<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+									<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+								<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+							<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+							<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+								<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/testimonials&quot;</span><span class="p">&gt;</span>Testimonials<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+							<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+							<span class="p">&lt;</span><span class="nt">li</span><span class="p">&gt;</span>
+								<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/our-story&quot;</span><span class="p">&gt;</span>
+										Our Story
+								<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+							<span class="p">&lt;/</span><span class="nt">li</span><span class="p">&gt;</span>
+						<span class="p">&lt;/</span><span class="nt">ul</span><span class="p">&gt;</span>
+					<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+					<span class="c">&lt;!--end of menu module--&gt;</span>
+					<span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;module left&quot;</span><span class="p">&gt;</span>
+						<span class="p">&lt;</span><span class="nt">a</span> <span class="na">class</span><span class="o">=</span><span class="s">&quot;btn btn-sm btn-filled&quot;</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/contact&quot;</span><span class="p">&gt;</span>Contact<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+					<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+			<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+			<span class="c">&lt;!--end of module group--&gt;</span>
+		<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+	<span class="p">&lt;/</span><span class="nt">nav</span><span class="p">&gt;</span>
+<span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+      </code></pre></figure>
+
+    </div>
+  </div>
+</article>
+
+
+<h2 id="guide-typography" class="cf">Typography</h2>
+
+<article class="component">
+  <header class="component__header">
+    <h3 id="guide-base-typography">Base Typography</h3>
+      <p><strong>Usage:</strong> The foundational typographic HTML elements</p>
+      
+      <p class="entry--last"><strong>SCSS partial:</strong> <a href="/styles/base/_tyopgraphy.scss">/styles/base/_tyopgraphy.scss</a></p>
+  </header>
+
+  <div class="component__content">
+    <div class="component__rendered">
+      <h1>Header 1</h1>
+<h2>Header 2</h2>
+<h3>Header 3</h3>
+<h4>Header 4</h4>
+<h5>Header 5</h5>
+<h6>Header 6</h6>
+
+<p>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh.</p>
+
+<a href="#">Link</a>
+
+
+    </div>
+    <div class="component__code">
+
+      <figure class="highlight"><pre><code class="language-html" data-lang="html"><span></span>        <span class="p">&lt;</span><span class="nt">h1</span><span class="p">&gt;</span>Header 1<span class="p">&lt;/</span><span class="nt">h1</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span>Header 2<span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span>Header 3<span class="p">&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h4</span><span class="p">&gt;</span>Header 4<span class="p">&lt;/</span><span class="nt">h4</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h5</span><span class="p">&gt;</span>Header 5<span class="p">&lt;/</span><span class="nt">h5</span><span class="p">&gt;</span>
+<span class="p">&lt;</span><span class="nt">h6</span><span class="p">&gt;</span>Header 6<span class="p">&lt;/</span><span class="nt">h6</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">p</span><span class="p">&gt;</span>Vivamus suscipit tortor eget felis porttitor volutpat. Curabitur non nulla sit amet nisl tempus convallis quis ac lectus. Donec sollicitudin molestie malesuada. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Vivamus magna justo, lacinia eget consectetur sed, convallis at tellus. Vestibulum ac diam sit amet quam vehicula elementum sed sit amet dui. Pellentesque in ipsum id orci porta dapibus. Vivamus suscipit tortor eget felis porttitor volutpat. Donec sollicitudin molestie malesuada. Sed porttitor lectus nibh.<span class="p">&lt;/</span><span class="nt">p</span><span class="p">&gt;</span>
+
+<span class="p">&lt;</span><span class="nt">a</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;#&quot;</span><span class="p">&gt;</span>Link<span class="p">&lt;/</span><span class="nt">a</span><span class="p">&gt;</span>
+
+
+      </code></pre></figure>
+
+    </div>
+  </div>
+</article>
+
+
+</div><!-- /#main -->
+
+    <!-- build:js /scripts/application.js -->
+<script src="/vendor/js/jquery.min.js"></script>
+<script src="/vendor/js/bootstrap.min.js"></script>
+<script src="/vendor/js/flickr.js"></script>
+<script src="/vendor/js/flexslider.min.js"></script>
+<script src="/vendor/js/masonry.min.js"></script>
+<script src="/vendor/js/countdown.min.js"></script>
+<script src="/vendor/js/smooth-scroll.min.js"></script>
+<script src="/vendor/js/parallax.js"></script>
+<script src="/scripts/application.js"></script>
+<!-- endbuild -->
+
+  </body>
+</html>
